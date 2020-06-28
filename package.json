@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-ramda-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ramda-extension modularized builds without the hassle",
   "repository": "331000738/babel-plugin-ramda-extension",
   "author": "xjp",

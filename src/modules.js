@@ -19,7 +19,7 @@ const ramdaPath = _ramdaPath.slice(0, _ramdaPath.lastIndexOf('ramda-extension') 
 
 // We do not need to change the search path based on useES since src and es are both built from the
 // same source in Ramda, and the directories will therefore always have identical contents.
-var methods = fs.readdirSync(path.join(ramdaPath, 'src'))
+var methods = fs.readdirSync(path.join(ramdaPath, 'es'))
     .filter(name => path.extname(name) == '.js')
     .map(name => path.basename(name, '.js'));
 
@@ -27,7 +27,7 @@ export default function resolveModule(useES, name) {
 
   for (var category in methods) {
     if (contains(name, methods)) {
-      return `ramda-extension/${useES ? 'es' : 'src'}/${name}`;
+      return `ramda-extension/es/${name}`;
     }
   }
   throw new Error(`Ramda method ${name} was not a known function
