@@ -1,9 +1,9 @@
 {
-  "name": "babel-plugin-ramda",
-  "version": "2.0.0",
-  "description": "Ramda modularized builds without the hassle",
-  "repository": "megawac/babel-plugin-ramda",
-  "author": "Graeme Yeates (github.com/megawac) <megawac@gmail.com>",
+  "name": "babel-plugin-ramda-extension",
+  "version": "1.0.0",
+  "description": "ramda-extension modularized builds without the hassle",
+  "repository": "331000738/babel-plugin-ramda-extension",
+  "author": "xjp",
   "main": "lib/index.js",
   "license": "WTFPL",
   "devDependencies": {
@@ -19,6 +19,7 @@
     "ramda": "*"
   },
   "scripts": {
+    "pub": "yarn build; npm publish --registry http://registry.npmjs.org ",
     "build": "rm -rf lib && babel src --out-dir lib",
     "test": "mocha --require @babel/register"
   },
